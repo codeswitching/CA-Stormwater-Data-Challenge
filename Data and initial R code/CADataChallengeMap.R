@@ -1,5 +1,5 @@
 #set path to project directory
-setwd("../CA DATA CHALLENGE")
+
 
 library(sp) #readOGR
 library(shiny)
@@ -18,7 +18,7 @@ library(lubridate)
 library(stringr)
 
 #Reading Shape Files
-dischargepoints <- readOGR(dsn = "Outfall_Prioritization.shp", layer = "swDischargePoint")
+dischargepoints <- readOGR("Outfall_Prioritization.shp", layer = "swDischargePoint")
 
 dischargepoints <- spTransform(dischargepoints, CRS("+proj=longlat"))
 
